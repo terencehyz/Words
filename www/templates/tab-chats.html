@@ -1,16 +1,19 @@
-<ion-view view-title="Chats">
+<ion-view view-title="NoteBook" style="background-image: url(img/3.jpg);background-size: cover;">
   <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
+
+    <h3 style="color: white; margin-top: 6%; margin-left: 5%">
+      <i class="icon ion-bookmark"></i>
+      To Remember
+    </h3>
+
+    <div class="list list-inset" style="opacity: 0.8">
+
+      <div class="item" ng-repeat="word in words" >
+        <h2>{{word.w}}</h2>
+        <p>{{word.n}} {{word.t}}</p>
+      </div>
+
+    </div>
   </ion-content>
 </ion-view>

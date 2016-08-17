@@ -1,14 +1,14 @@
-<ion-view hide-nav-bar="true" style="background-image: url(img/bg1.jpg)">
+<ion-view hide-nav-bar="true" style="background-image: url(img/1.jpg);background-size: cover;">
   <ion-content>
-    <h2 style="text-align: center;padding-top: 50%;color: #ffffff;">Words Killer</h2>
-    <div class="row" style="position: fixed;bottom: 5%">
+    <h1 style="text-align: center;padding-top: 50%;color: #fff;">Words Killer</h1>
+    <div class="row" style="padding-top: 70%">
       <div class="col-33 col-offset-10">
         <button class="button button-outline button-light" style="width: 100%; text-align: center" ng-click="goNew()">
-          New Game
+          NewGame
         </button>
       </div>
       <div class="col-33 col-offset-10">
-        <button class="button button-outline button-light" style="width: 100%; text-align: center" ng-click="goOn()">
+        <button class="button button-outline button-light" style="width: 100%; text-align: center" ng-click="goOn()" ng-disabled="btnAble">
           Continue
         </button>
       </div>

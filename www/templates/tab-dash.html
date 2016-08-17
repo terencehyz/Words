@@ -1,54 +1,47 @@
-<ion-view view-title="Words Killer">
+<ion-view view-title="Words Killer"style="background-image: url(img/2.jpg);background-size: cover;">
   <ion-content class="padding">
 
-    <div class="card">
+    <div class="card" style="opacity: 0.8">
       <div class="item item-divider">
-        Life:10 Point:11
+        Life:{{data.life}} Point:{{data.point}}
       </div>
       <div class="item item-text-wrap">
-        <h1 style="text-align: center;">123</h1>
+        <h1 style="text-align: center;">{{myWord.ww}}</h1>
       </div>
     </div>
 
-    <div class="card">
+    <div class="card"style="opacity: 0.8">
       <div class="item item-text-wrap">
-        This is tip
+        Translation:&nbsp;<span ng-show="data.showTran">{{myWord.t}}</span>
+        <br>
+        Tip:&nbsp;<span ng-show="data.showTip">{{myWord.n}}</span>
+        <div class="row" style="margin-top: 3%">
+          <div class="col-40">
+            <button class="button button-outline button-positive button-small" style="width: 100%" ng-click="wordTran()">
+              Translation
+            </button>
+          </div>
+          <div class="col-40 col-offset-20">
+            <button class="button button-outline button-positive button-small" style="width: 100%" ng-click="wordTip()">
+              Tip
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
 
-    <div class="list list-inset">
+    <div class="list list-inset"style="opacity: 0.8">
       <label class="item item-input">
-        <input type="text" placeholder="Complete the word">
+        <input type="text" placeholder="Complete the word" ng-model="data.inLetter">
       </label>
     </div>
     <button class="button button-block button-balanced" ng-click="wordSubmit()">
       Submit
     </button>
-    <div class="row">
-      <div class="col-40">
-        <button class="button button-block button-positive" ng-click="wordTran()">
-          Translation
-        </button>
-      </div>
-      <div class="col-40 col-offset-20">
-        <button class="button button-block button-positive" ng-click="wordTip()">
-          Tip
-        </button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-40">
-        <button class="button button-block button-positive" ng-click="wordNote()">
-          Notes
-        </button>
-      </div>
+    <button class="button button-block button-assertive" ng-click="wordPass()">
+      Pass
+    </button>
 
-      <div class="col-40 col-offset-20">
-        <button class="button button-block button-assertive" ng-click="wordPass()">
-          Pass
-        </button>
-      </div>
-    </div>
   </ion-content>
 </ion-view>
